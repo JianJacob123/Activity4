@@ -159,9 +159,15 @@ where dfirstname = 'Dr.Sofia';
     from invoices;
 
     -- list total appointment owner maria
-    SELECT COUNT(*) AS total_appointments
-FROM appointments
-WHERE animalid IN (SELECT animalid FROM owners WHERE ofirstname = 'Maria');
+    SELECT owners.ofirstname AS "owner",
+count(appointments.animalid) AS "Total Appointment"
+FROM animals
+INNER JOIN owners
+ON animals.ownerid = owners.ownerid
+INNER JOIN appointments
+ON animals.animalid = appointments.animalid
+where owners.ofirstname = 'Maria'
+group by owners.ofirstname;
 
 --list animal w most appoinment
 Select a.animalid,a.name,
