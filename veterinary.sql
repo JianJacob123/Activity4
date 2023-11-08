@@ -156,3 +156,8 @@ where dfirstname = 'Dr.Sofia';
     --List total sales
     Select sum(totalamount) as total_sales
     from invoices;
+
+    -- list total appointment owner maria
+    SELECT COUNT(*) AS total_appointments
+FROM appointments
+WHERE animalid IN (SELECT animalid FROM owners WHERE ofirstname = 'Maria');
