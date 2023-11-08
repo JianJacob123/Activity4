@@ -152,3 +152,7 @@ where dfirstname = 'Dr.Sofia';
 
     -- list species
     SELECT DISTINCT species FROM animal;
+
+    --List total sales
+    Select sum(totalamount) as total_sales
+    from invoices;
