@@ -20,3 +20,8 @@ color varchar(50),
 ownerid int not null,
 foreign key (ownerid) references owners (ownerid)
 );
+
+--CREATE TABLES APPOINTMENTS
+CREATE TABLE appointments (appointid INT NOT NULL PRIMARY KEY, animalid INT NOT NULL,
+						 FOREIGN KEY(animalid) REFERENCES animal(animalid),
+						 appointdate DATE, reason VARCHAR(255) NOT NULL);
