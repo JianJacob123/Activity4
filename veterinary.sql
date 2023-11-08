@@ -23,7 +23,7 @@ foreign key (ownerid) references owners (ownerid)
 
 --CREATE TABLES APPOINTMENTS
 CREATE TABLE appointments (appointid INT NOT NULL PRIMARY KEY, animalid INT NOT NULL,
-						 FOREIGN KEY(animalid) REFERENCES animal(animalid),
+						 FOREIGN KEY(animalid) REFERENCES animals(animalid),
 						 appointdate DATE, reason VARCHAR(255) NOT NULL);
 
 --CREATE TABLES DOCTORS
@@ -31,7 +31,7 @@ create table doctors(
 doctorid int primary key,
 dfirstname varchar(50),
 dlastname varchar(50),
-speacialty varchar(100),
+specialty varchar(100),
 phone varchar(15),
 email varchar(100)
 );
@@ -97,7 +97,7 @@ VALUES (1, 1, '2023-01-05', 'Annual Checkup'),
 (10, 10, '2023-05-20', 'Eye infection');
 
 --INSERT VALUES DOCTORS
-INSERT INTO doctors (doctorid,dfirstname, dlastname, speacialty, phone, email)
+INSERT INTO doctors (doctorid,dfirstname, dlastname, specialty, phone, email)
 VALUES
     (1,'Dr. Maria', 'Santos', 'General Veterinarian', '987-654-3210', 'maria@example.com'),
     (2,'Dr. Antonio', 'Gonzales', 'Feline Specialist', '555-123-4567', 'antonio@example.com'),
