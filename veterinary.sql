@@ -150,4 +150,5 @@ update doctors
 set dlastname = 'Reyes-Gonzales'
 where dfirstname = 'Dr.Sofia';
 
-    
+    -- list species
+    SELECT DISTINCT species FROM animal;
