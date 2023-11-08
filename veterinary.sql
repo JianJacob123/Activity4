@@ -145,5 +145,9 @@ WHERE animalid = (
 SELECT animalid FROM animal WHERE name = 'Simba'
 );
 
+--Modify Last name Dr. Reyes Gonzales
+update doctors
+set dlastname = 'Reyes-Gonzales'
+where dfirstname = 'Dr.Sofia';
 
     
