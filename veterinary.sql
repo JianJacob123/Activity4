@@ -35,3 +35,9 @@ speacialty varchar(100),
 phone varchar(15),
 email varchar(100)
 );
+
+--CREATE TABLES INVOICES
+CREATE TABLE invoices(invoiceid INT NOT NULL PRIMARY KEY, appointid INT NOT NULL,
+						 FOREIGN KEY(appointid) REFERENCES appointments(appointid),
+						 totalamount NUMERIC(10,2), paymentdate TIME);
+
