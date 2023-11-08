@@ -161,3 +161,12 @@ where dfirstname = 'Dr.Sofia';
     SELECT COUNT(*) AS total_appointments
 FROM appointments
 WHERE animalid IN (SELECT animalid FROM owners WHERE ofirstname = 'Maria');
+
+--list animal w most appoinment
+Select a.animalid,a.name,
+count(*)as appointment_count
+from animals a
+join appointments ap on
+a.animalid = ap,animalid
+group by a.animalid,a.name
+order by appointment_count desc limit 1;
