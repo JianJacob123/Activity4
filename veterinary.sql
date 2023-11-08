@@ -151,7 +151,7 @@ set dlastname = 'Reyes-Gonzales'
 where dfirstname = 'Dr.Sofia';
 
     -- list species
-    SELECT DISTINCT species FROM animal;
+    SELECT DISTINCT species FROM animals;
 
     --List total sales
     Select sum(totalamount) as total_sales
