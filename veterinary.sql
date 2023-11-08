@@ -138,4 +138,12 @@ VALUES
     --Rename column paymenttime
 alter table invoices
 rename column paymentdate to paymenttime;
+
+-- Remove simba in appointments
+DELETE FROM appointments
+WHERE animalid = (
+SELECT animalid FROM animal WHERE name = 'Simba'
+);
+
+
     
