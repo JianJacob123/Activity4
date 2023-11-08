@@ -41,3 +41,16 @@ CREATE TABLE invoices(invoiceid INT NOT NULL PRIMARY KEY, appointid INT NOT NULL
 						 FOREIGN KEY(appointid) REFERENCES appointments(appointid),
 						 totalamount NUMERIC(10,2), paymentdate TIME);
 
+
+--CREATE TABLE MEDICALRECORDS
+create table medicalrecords(
+recordid int primary key,
+animalid int not null,
+foreign key (animalid) references animals (animalid),
+recorddate timestamp,
+doctorid int not null,
+foreign key (doctorid) references doctors (doctorid),
+diagnosis text,
+prescription text,
+notes text
+);
