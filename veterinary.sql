@@ -140,10 +140,11 @@ alter table invoices
 rename column paymentdate to paymenttime;
 
 -- Remove simba in appointments
-DELETE FROM appointments
-WHERE animalid = (
-SELECT animalid FROM animal WHERE name = 'Simba'
-);
+delete from invoices
+where appointid = 8;
+
+delete from appointments
+where animalid = 8;
 
 --Modify Last name Dr. Reyes Gonzales
 update doctors
