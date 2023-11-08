@@ -25,3 +25,13 @@ foreign key (ownerid) references owners (ownerid)
 CREATE TABLE appointments (appointid INT NOT NULL PRIMARY KEY, animalid INT NOT NULL,
 						 FOREIGN KEY(animalid) REFERENCES animal(animalid),
 						 appointdate DATE, reason VARCHAR(255) NOT NULL);
+
+--CREATE TABLES DOCTORS
+create table doctors(
+doctorid int primary key,
+dfirstname varchar(50),
+dlastname varchar(50),
+speacialty varchar(100),
+phone varchar(15),
+email varchar(100)
+);
