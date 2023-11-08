@@ -167,6 +167,6 @@ Select a.animalid,a.name,
 count(*)as appointment_count
 from animals a
 join appointments ap on
-a.animalid = ap,animalid
+a.animalid = ap.animalid
 group by a.animalid,a.name
 order by appointment_count desc limit 1;
